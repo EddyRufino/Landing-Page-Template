@@ -1,0 +1,276 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Poppins', sans-serif;
+}
+
+section {
+	position: relative;
+	width: 100%;
+	min-height: 100vh;
+	padding: 100px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	/*background: #0062be;*/
+	background: #1a202c;
+	transition: 0.5;
+}
+
+header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	padding: 20px 100px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	z-index: 9;
+}
+
+header .logo {
+	position: relative;
+	max-width: 70px;
+}
+
+header ul {
+	position: relative;
+	display: flex;
+}
+
+header ul li {
+	list-style: none;
+}
+
+header ul li a {
+	display: inline-block;
+	color: #fff;
+	font-weight: 400;
+	margin-left: 40px;
+	text-decoration: none;
+}
+
+// Menu scroll
+header.sticky {
+	padding: 5px 100px;
+	background-color: #fff;
+}
+
+.sticky {
+	padding: 5px 100px;
+	background-color: #fff;
+}
+
+header.sticky .logo-name,
+header.sticky ul li a {
+	color: #1a202c;
+}
+
+// Atras
+.imgBox .ball {
+    /*position: absolute;*/
+    /*width: 250px;*/
+    /*height: 250px;*/
+    /*background: red;*/
+    /*opacity: .5;*/
+}
+
+.imgBox .ball::before {
+	content: '';
+	position: absolute;
+	width: 350px;
+    height: 350px;
+    background: #2d3748;
+    border-radius: 50%;
+    transform: translate(20%, -8%);
+    opacity: .5;
+}
+
+.content {
+	position: relative;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.content .textBox {
+	position: relative;
+	max-width: 600px;
+}
+
+.content .textBox h1 {
+	color: #fff;
+	font-size: 4em;
+	line-height: 1.5em;
+	font-weight: 900;
+	text-transform: uppercase;
+}
+
+.content .textBox h2 {
+	color: #fff;
+	font-size: 4em;
+	line-height: 1.5em;
+	font-weight: 900;
+	text-transform: uppercase;
+}
+
+.content .textBox h3 {
+	color: #fff;
+	font-size: 2em;
+	line-height: 1.5em;
+	font-weight: 900;
+	text-transform: uppercase;
+}
+
+.content .textBox h2 span {
+	font-size: 2em;
+}
+
+.content .textBox p {
+	color: #fff;
+}
+
+.content .textBox a {
+	display: inline-block;
+	margin-top: 20px;
+	padding: 8px 20px;
+	background: #fff;
+	color: #111;
+	border-radius: 40px;
+	font-weight: 500;
+	letter-spacing: 1px;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+.content .imgBox {
+	width: 600px;
+	display: flex;
+	padding-right: 50px;
+	margin-top: 50px;
+	justify-content: flex-end;
+}
+
+
+
+.content .imgBox img {
+	max-width: 410px;
+	z-index: 7;
+}
+
+.logo-name {
+	font-size: 1.6em;
+	color: white;
+}
+
+/* Menu Select */
+ul #marker {
+	position: absolute;
+	left: 0;
+	height: 4px;
+	width: 0;
+	background: #e2e8f0;
+	bottom: -8px;
+	transition: 0.5s;
+	border-radius: 4px;
+}
+/* Fin Menu Select */
+
+@media (max-width: 991px) {
+	section {
+		padding: 40px;
+		padding-bottom: 140px;
+	}
+	header {
+		padding: 20px 40px;
+	}
+	header .logo {
+		position: relative;
+		max-width: 60px;
+	}
+	header ul {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: #fff;
+		z-index: 1;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		transition: 0.2s;
+		visibility: hidden;
+		opacity: 0;
+	}
+	header ul.active {
+		visibility: visible;
+		opacity: 1;
+	}
+	header ul li a {
+		display: inline-block;
+		color: #111;
+		font-weight: 400;
+		margin-left: 0;
+		text-decoration: none;
+		font-size: 2em;
+		margin: 10px 0;
+	}
+	header ul li a:hover {
+		color: #ed0223;
+	}
+	.toggleMenu {
+		position: relative;
+		width: 40px;
+		height: 40px;
+		background: url(../img/menu.png);
+		background-position: center;
+		background-size: 30px;
+		background-repeat: no-repeat;
+		background-color: #1a202c;
+		border-radius: 5px;
+		z-index: 2;
+		cursor: pointer;
+	}
+	.toggleMenu.active {
+		background: url(../img/close.png);
+		background-position: center;
+		background-size: 25px;
+		background-repeat: no-repeat;
+		filter: invert(1);
+	}
+	.content {
+		flex-direction: column;
+		margin-top: 80px;
+	}
+	.content .textBox {
+		position: relative;
+		max-width: 100%;
+		padding-right: 20px;
+	}
+
+	.content .textBox h2 {
+		font-size: 3em;
+	}
+	.content .textBox a {
+		font-size: 14px;
+		padding: 8px 15px;
+	}
+	.content .imgBox {
+		width: 100%;
+		display: flex;
+		padding-right: 0;
+		margin-top: 50px;
+		justify-content: center;
+	}
+	.content .imgBox img {
+		max-width: 150px;
+	}
+
+
+}
