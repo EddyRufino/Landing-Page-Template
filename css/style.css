@@ -10,9 +10,11 @@
 section {
 	position: relative;
 	width: 100%;
+	max-width: 1440px;
 	min-height: 100vh;
 	padding: 100px;
 	display: flex;
+	margin: 0 auto;
 	justify-content: space-between;
 	align-items: center;
 	/*background: #0062be;*/
@@ -56,18 +58,19 @@ header ul li a {
 
 // Menu scroll
 header.sticky {
-	padding: 5px 100px;
+	padding: 5px 35px;
 	background-color: #fff;
 }
 
 .sticky {
-	padding: 5px 100px;
+	padding: 5px 35px;
 	background-color: #fff;
 }
 
 header.sticky .logo-name,
 header.sticky ul li a {
 	color: #1a202c;
+	transition: .5s;
 }
 
 // Atras
@@ -271,6 +274,44 @@ ul #marker {
 	.content .imgBox img {
 		max-width: 150px;
 	}
+}
 
+@media (max-width: 991px) {
+	.imgBox .ball::before {
+	    content: '';
+	    position: absolute;
+	    width: 120px;
+	    height: 120px;
+	    background: #2d3748;
+	    border-radius: 50%;
+	    transform: translate(25%, -10%);
+	    opacity: .5;
+	}
+}
 
+@media (max-width: 375px) {
+	.content .textBox h2 {
+		font-size: 2.5em;
+	}
+}
+
+@media (min-width: 2560px) {
+	header {
+		max-width: 1440px;
+		transform: translateX(38.9%);
+	}
+
+	header ul li a {
+		display: inline-block;
+		font-weight: 400;
+		margin-left: 0;
+		text-decoration: none;
+		font-size: 2.3em;
+		margin: 10px 0;
+		padding: .5em;
+	}
+
+	header a .logo-name {
+		font-size: 2.3em;
+	}
 }
