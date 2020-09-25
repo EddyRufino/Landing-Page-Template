@@ -339,6 +339,26 @@ ul #marker {
 	    transform: translate(25%, -10%);
 	    opacity: .5;
 	}
+	.about {
+	    max-width: 1440px;
+	    position: relative;
+	    width: 100%;
+	    display: flex;
+	    flex-direction: column-reverse;
+	    justify-content: center;
+	    align-items: center;
+	}
+
+	.description-container {
+	    /* padding-left: 1em; */
+	    width: 100%;
+	}
+
+	.photo-container {
+	    /* width: 50%; */
+	    /* padding-right: 1em; */
+	    margin-top: 2em;
+	}
 }
 
 @media (max-width: 375px) {
@@ -365,5 +385,17 @@ ul #marker {
 
 	header a .logo-name {
 		font-size: 2.3em;
+	}
+	.description-container {
+	    padding-left: 1em;
+	    width: 60%;
+	}
+	.title-about {
+	    color: #fff;
+	    font-size: 3em;
+	}
+	.parrafo-about {
+	    color: #cbd5e0;
+	    font-size: 1.5em;
 	}
 }
