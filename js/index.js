@@ -1,9 +1,31 @@
-function menuToggle() {
-	const toggleMenu = document.querySelector('.toggleMenu');
-	const navigation = document.querySelector('.navigation');
-	toggleMenu.classList.toggle('active');
-	navigation.classList.toggle('active');
-}
+// function menuToggle() {
+// 	const toggleMenu = document.querySelector('.toggleMenu');
+// 	const navigation = document.querySelector('.navigation');
+// 	toggleMenu.classList.toggle('active');
+// 	navigation.classList.toggle('active');
+// }
+
+const menuToggle = document.querySelector('.toggleMenu');
+
+const nav = document.querySelector('.navigation');
+
+menuToggle.addEventListener('click', () => {
+
+    if (nav.className != 'active') {nav.className = 'active';}
+
+    else {nav.className = '';}
+
+});
+
+// Click y cerrar menu responsi
+const link = document.querySelector('ul');
+
+link.addEventListener('click', () => {
+
+	nav.className = 'XDD';
+
+});
+
 
 // Menu select
 let marker = document.querySelector('#marker');
@@ -17,7 +39,7 @@ function indicator(e) {
 item.forEach(link => {
 	link.addEventListener('click', (e) => {
 		indicator(e.target);
-		console.log('xD');
+		// console.log('xD');
 	})
 })
 
