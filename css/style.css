@@ -216,10 +216,13 @@ ul #marker {
 }
 
 .title-about {
+	font-size: 36px;
+	font-weight: 500;
 	color: #fff;
 }
 
 .parrafo-about {
+	font-weight: 300;
 	color: #cbd5e0;
 }
 
@@ -245,6 +248,32 @@ ul #marker {
 	background: #1a202c;
 	min-height: 100vh;
 }*/
+#servicios {
+	display: flex;
+	flex-direction: column;
+}
+
+.content-card {
+	display: flex;
+}
+
+.content-info-servicios {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.content-info-servicios h2 {
+	font-size: 36px;
+	font-weight: 500;
+	color: #fff;
+}
+
+.content-info-servicios p {
+	font-weight: 300;
+	color: #fff;
+}
 
 .container {
 	display: flex;
@@ -291,7 +320,7 @@ ul #marker {
 
 .container .card:hover .face.face1 {
 	transform: translateY(-100%) rotateX(90deg);
-	background: #ff0057;
+	background: #00bcd4;
 }
 
 .container .card .face.face2 {
@@ -309,6 +338,146 @@ ul #marker {
 }
 
 /*** Fin Servicios ***/
+
+/*** Contact ***/
+
+#contacto {
+	display: flex;
+	flex-direction: column;
+}
+
+.contact {
+	position: relative;
+	min-height: 100vh;
+	padding: 50px 100px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+.contact .content-form {
+	max-width: 800px;
+	text-align: center;
+}
+
+.contact .content-form h2 {
+	font-size: 36px;
+	font-weight: 500;
+	color: #fff;
+}
+
+.contact .content-form p {
+	font-weight: 300;
+	color: #fff;
+}
+
+.container-info {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 30px;
+}
+
+.container-info .contact-info {
+ 	width: 50%;
+ 	display: flex;
+ 	flex-direction: column;
+}
+
+.container-info .contact-info .box {
+ 	position: relative;
+ 	padding: 20px 0;
+ 	display: flex;
+}
+
+.container-info .contact-info .box .icon {
+  	min-width: 60px;
+  	height: 60px;
+  	background: #fff;
+  	display: flex;
+  	justify-content: center;
+  	align-items: center;
+  	border-radius: 50%;
+  	font-size: 22px;
+}
+
+.container-info .contact-info .box .text {
+	display: flex;
+	margin-left: 20px;
+	font-size: 16px;
+	color: #fff;
+	flex-direction: column;
+	font-weight: 300;
+}
+
+.container-info .contact-info .box .text h3 {
+	font-weight: 500;
+	color: #00bcd4;
+}
+
+.contact-form {
+	width: 40%;
+	padding: 40px;
+	background: #fff;
+}
+
+.contact-form h2 {
+	font-size: 30px;
+	color: #333;
+	font-weight: 500;
+}
+
+.contact-form .input-box {
+	position: relative;
+	width: 100%;
+	margin-top: 10px;
+}
+
+.contact-form .input-box input,
+.contact-form .input-box textarea {
+	width: 100%;
+	padding: 5px 0;
+	font-size: 16px;
+	margin: 10px 0;
+	border: none;
+	border-bottom: 2px solid #333;
+	outline: none;
+	resize: none;
+}
+
+.contact-form .input-box span {
+	position: absolute;
+	left: 0;
+	padding: 5px 0;
+	font-size: 16px;
+	margin: 10px 0;
+	pointer-events: none;
+	transition: 0.5s;
+	color: #666;
+}
+
+.contact-form .input-box input:focus ~ span,
+.contact-form .input-box input:valid ~ span,
+.contact-form .input-box textarea:focus ~ span,
+.contact-form .input-box textarea:valid ~ span {
+	color: #e91e63;
+	font-size: 12px;
+	transform: translateY(-20px);
+}
+
+.contact-form .input-box input[type="submit"] {
+	width: 100px;
+	background: #00bcd4;
+	color: #fff;
+	border: none;
+	cursor: pointer;
+	padding: 10px;
+	font-size: 18px;
+}
+
+/*** Fin Contact ***/
 
 @media (max-width: 991px) {
 	section {
@@ -410,6 +579,13 @@ ul #marker {
 	    flex-direction: column;
 	}
 
+	.content-card {
+	    display: flex;
+	    justify-content: center;
+	    align-items: center;
+	    flex-direction: column;
+	}
+
 	/** Fin Servicios **/
 }
 
@@ -444,6 +620,23 @@ ul #marker {
 	    /* padding-right: 1em; */
 	    margin-top: 2em;
 	}
+
+	/*** Contact ***/
+
+	.contact {
+		padding: 50px;
+	}
+	.container-info {
+		flex-direction: column;
+	}
+	.container-info .contact-info {
+		margin-bottom: 40px;
+	}
+	.container-info .contact-form {
+		width: 100%;
+	}
+
+	/*** Fin Contact ***/
 }
 
 @media (max-width: 375px) {
@@ -477,10 +670,12 @@ ul #marker {
 	}
 	.title-about {
 	    color: #fff;
+	    font-weight: 500;
 	    font-size: 3em;
 	}
 	.parrafo-about {
 	    color: #cbd5e0;
+	    font-weight: 300;
 	    font-size: 1.5em;
 	}
 }
